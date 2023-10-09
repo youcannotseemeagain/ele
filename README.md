@@ -12,7 +12,7 @@
 |     |     |     |
 | --- | --- | --- |
 | 类型  | 功能名称 | 使用示例 |
-| 提权  | PrintSpoofer提权 | PipePotato 建议win7以上使用 C:\\temp\\1.exe |
+| 提权  | PrintSpoofer提权，建议win7以上使用 | PipePotato  C:\\temp\\1.exe |
 | 提权  | RasmanPotato提权 | RasmanPotato C:\\temp\\1.exe |
 | 提权  | Win32k CVE-2019-0808提权，建议win7使用 | CVE-2019-0808 C:\\temp\\1.exe |
 | BypassUAC | com组件CMLuaUtil  bypassuac | BypassUAC-CMLuaUtil C:\\temp\\1.exe |
