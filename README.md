@@ -26,5 +26,8 @@
 
 # 其他
 --
-
 注意：dll仅支持64位系统
+
+# 感谢以下项目
+https://github.com/stephenfewer/ReflectiveDLLInjection
+https://github.com/hfiref0x/UACME
