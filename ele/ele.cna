@@ -12,7 +12,7 @@ alias PipePotato {
     bdllspawn($1, $archdll, $2, "no", 999999, false);
 }
 
-beacon_command_register("PipePotato", "PrintSpoofer Privilege Escalation. Windows 10 and above are recommended". "PrintSpoofer Privilege Escalation. \n\n useage:PipePotato c:\\a.exe");
+beacon_command_register("PipePotato", "PrintSpoofer Privilege Escalation. Windows 10 and above are recommended". "PrintSpoofer Privilege Escalation. \n\n usage:PipePotato c:\\a.exe");
 
 
 alias RasmanPotato {
@@ -29,7 +29,7 @@ alias RasmanPotato {
     bdllspawn($1, $archdll, $2, "test", 999999, false);
 }
 
-beacon_command_register("RasmanPotato", "RasmanPotato Privilege Escalation", "RasmanPotato Privilege Escalation. \n\n useage:RasmanPotato c:\\a.exe");
+beacon_command_register("RasmanPotato", "RasmanPotato Privilege Escalation", "RasmanPotato Privilege Escalation. \n\n usage:RasmanPotato c:\\a.exe");
 
 
 alias CVE-2019-0808 {
@@ -46,7 +46,7 @@ alias CVE-2019-0808 {
     bdllspawn($1, $archdll, $2, "test", 999999, false);
 }
 
-beacon_command_register("CVE-2019-0808", "CVE-2019-0808 Privilege Escalation,Windows 7 is recommended", "CVE-2019-0808 Privilege Escalation.\n\n  useage:CVE-2019-0808 c:\\a.exe");
+beacon_command_register("CVE-2019-0808", "CVE-2019-0808 Privilege Escalation,Windows 7 is recommended", "CVE-2019-0808 Privilege Escalation.\n\n  usage:CVE-2019-0808 c:\\a.exe");
 
 
 alias BypassUAC-CMLuaUtil {
@@ -63,7 +63,7 @@ alias BypassUAC-CMLuaUtil {
     bdllspawn($1, $archdll, $2, "test", 999999, false);
 }
 
-beacon_command_register("BypassUAC-CMLuaUtil", "UACME No.41,bypassuac via com component CMLuaUtil", "bypassuac via com component CMLuaUtil,Microsoft not fixed. \n\n useage: BypassUAC-CMLuaUtil c:\\a.exe");
+beacon_command_register("BypassUAC-CMLuaUtil", "UACME No.41,bypassuac via com component CMLuaUtil", "bypassuac via com component CMLuaUtil,Microsoft not fixed. \n\n usage: BypassUAC-CMLuaUtil c:\\a.exe");
 
 
 alias BypassUAC-ShellRegMod {
@@ -80,7 +80,7 @@ alias BypassUAC-ShellRegMod {
     bdllspawn($1, $archdll, $2, "test", 999999, false);
 }
 
-beacon_command_register("BypassUAC-ShellRegMod", "UACME No.33,Using the registry bypassuac via fodhelper and computerdefault", "bypassuac via fodhelper and computerdefault registry, Microsoft not fixed.\n\n useage: BypassUAC-ShellRegMod c:\\a.exe");
+beacon_command_register("BypassUAC-ShellRegMod", "UACME No.33,Using the registry bypassuac via fodhelper and computerdefault", "bypassuac via fodhelper and computerdefault registry, Microsoft not fixed.\n\n usage: BypassUAC-ShellRegMod c:\\a.exe");
 
 
 alias BypassUAC-ShellRegMod2 {
@@ -97,7 +97,7 @@ alias BypassUAC-ShellRegMod2 {
     bdllspawn($1, $archdll, $2, "test", 999999, false);
 }
 
-beacon_command_register("BypassUAC-ShellRegMod2", "UACME No.61&53,bypassuac via slui and sdclt registry", "Use the registry slui and sdclt bypassUAC,Microsoft not fixed. \n\n useage: BypassUAC-ShellRegMod2 c:\\a.exe");
+beacon_command_register("BypassUAC-ShellRegMod2", "UACME No.61&53,bypassuac via slui and sdclt registry", "Use the registry slui and sdclt bypassUAC,Microsoft not fixed. \n\n usage: BypassUAC-ShellRegMod2 c:\\a.exe");
 
 
 alias BypassUAC-ShellRegMod3 {
@@ -114,7 +114,7 @@ alias BypassUAC-ShellRegMod3 {
     bdllspawn($1, $archdll, $2, "test", 999999, false);
 }
 
-beacon_command_register("BypassUAC-ShellRegMod3", "UACME No.70,Similar to BypassUAC-ShellRegMod", "Similar to BypassUAC-ShellRegMod ,Microsoft not fixed. \n\n useage: BypassUAC-ShellRegMod3 c:\\a.exe");
+beacon_command_register("BypassUAC-ShellRegMod3", "UACME No.70,Similar to BypassUAC-ShellRegMod", "Similar to BypassUAC-ShellRegMod ,Microsoft not fixed. \n\n usage: BypassUAC-ShellRegMod3 c:\\a.exe");
 
 
 alias BypassUAC-DccwCOM {
@@ -131,4 +131,4 @@ alias BypassUAC-DccwCOM {
     bdllspawn($1, $archdll, $2, "test", 999999, false);
 }
 
-beacon_command_register("BypassUAC-DccwCOM", "No.43,bypassuac via DccwCOM " "bypassuac via DccwCOM,Microsoft not fixed. \n\n useage: BypassUAC-DccwCOM c:\\a.exe");
+beacon_command_register("BypassUAC-DccwCOM", "No.43,bypassuac via DccwCOM " "bypassuac via DccwCOM,Microsoft not fixed. \n\n usage: BypassUAC-DccwCOM c:\\a.exe");
