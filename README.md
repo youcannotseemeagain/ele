@@ -16,6 +16,10 @@
 | 提权  | RasmanPotato提权，建议win10及以上使用 | C:\\temp\\1.exe |
 | 提权  | Win32k CVE-2019-0808提权，建议win7及以下使用 | CVE-2019-0808 C:\\temp\\1.exe |
 | 提权  | Win32k CVE-2024-30088提权，建议win10及以上使用，这个利用会延迟1分钟左右| CVE-2024-30088 C:\\temp\\1.exe |
+| 提权  | appid.sys CVE-2024-21338提权，建议win10及以上使用| CVE-2024-21338 C:\\temp\\1.exe |
+| 提权  | ks.sys CVE-2024-35250提权，建议win10及以上使用| CVE-2024-35250 C:\\temp\\1.exe |
+| 提权  | ksthunk CVE-2024-38054提权，建议win10及以上使用| CVE-2024-38054 C:\\temp\\1.exe |
+| 提权  | csc.sys CVE-2024-26229提权，建议win10及以上使用| CVE-2024-26229 C:\\temp\\1.exe |
 | BypassUAC | com组件CMLuaUtil  bypassuac | BypassUAC-CMLuaUtil C:\\temp\\1.exe |
 | BypassUAC | 通过fodhelper和computerdefault使用注册表bypassuac | BypassUAC-ShellRegMod C:\\temp\\1.exe |
 | BypassUAC | 通过slui和sdclt使用注册表bypassuac | BypassUAC-ShellRegMod2 C:\\temp\\1.exe |
