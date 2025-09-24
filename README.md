@@ -2,6 +2,7 @@
 ----
 
 该插件主要包括各种提权、ByPassUAC等功能。使用cobaltstrike加载ele.cna，并确保cna与dll文件在同一目录下，否则需要修改脚本的dll路径。
+DLL是反射DLL，正常情况下也可以用于其他支持反射DLL的C2。
 
 # 功能模块
 ----
@@ -26,6 +27,8 @@
 | BypassUAC | 通过slui和sdclt使用注册表bypassuac | BypassUAC-ShellRegMod2 C:\\temp\\1.exe |
 | BypassUAC | 和BypassUAC-ShellRegMod类似 | BypassUAC-ShellRegMod3 C:\\temp\\1.exe |
 | BypassUAC | com组件DccwCOM BypassUAC | BypassUAC-DccwCOM C:\\temp\\1.exe |
+| BypassUAC | com组件DccwCOM BypassUAC | BypassUAC-DccwCOM C:\\temp\\1.exe |
+| 功能滥用 | 使用微软自带的WerFaultSecure功能以驱动权限暂停任意进程，可以100%暂停WindowsDefender，其他杀毒看运气。代码来自 https://github.com/TwoSevenOneT/EDR-Freeze | SuspendProcess 1234(进程PID) |
 
 # 使用截图
 ![](img/img.jpg)
@@ -34,7 +37,6 @@
 --
 注意：dll仅支持64位系统
 
-# 感谢以下项目
+# 代码来自以下项目
 https://github.com/stephenfewer/ReflectiveDLLInjection
-
 https://github.com/hfiref0x/UACME
